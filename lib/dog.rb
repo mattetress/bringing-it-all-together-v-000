@@ -31,7 +31,6 @@ class Dog
       FROM dogs
       WHERE name = ?
     SQL
-
     self.new_from_db(DB[:conn].execute(sql, name)[0])
   end
 
